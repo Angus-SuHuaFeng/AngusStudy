@@ -1,6 +1,6 @@
 package SparkStreaming.SparkStreaming_Req.Util
 
-import java.io.{FileInputStream, InputStreamReader}
+import java.io.InputStreamReader
 import java.util.Properties
 
 
