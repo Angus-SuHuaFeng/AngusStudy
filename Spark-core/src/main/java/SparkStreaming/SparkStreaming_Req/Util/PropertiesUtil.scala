@@ -8,7 +8,7 @@ object PropertiesUtil {
   def load(propertiesName:String): Properties ={
     val prop=new Properties()
     prop.load(new
-        InputStreamReader(new FileInputStream(propertiesName) , "UTF-8"))
+        InputStreamReader(Thread.currentThread().getContextClassLoader.getResourceAsStream(propertiesName) , "UTF-8"))
     prop
   }
 }
