@@ -53,6 +53,7 @@ public class MJMapper extends Mapper<LongWritable, Text, Text, NullWritable> {
     Text k = new Text();
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
+
 //        获取一行数据
         String line = value.toString();
 //        切分数据

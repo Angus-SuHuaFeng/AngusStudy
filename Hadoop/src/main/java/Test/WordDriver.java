@@ -16,7 +16,7 @@ import java.io.IOException;
 public class WordDriver {
     public static void main(String[] args) throws IOException, InterruptedException, ClassNotFoundException {
         Configuration conf = new Configuration();
-        conf.set("fs.defaultFS","hdfs://BigData1:9000");
+        conf.set("fs.defaultFS","hdfs://bigdata1:8020");
         Job job = Job.getInstance(conf);
         //设置Driver(本类)的jar加载路径
         job.setJarByClass(WordDriver.class);
@@ -31,8 +31,8 @@ public class WordDriver {
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(IntWritable.class);
         //设置输入输出路径(hdfs路径),如果是本地运行则需要将windows的hadoop开启
-        FileInputFormat.setInputPaths(job,new Path("/data1/text.txt"));
-        FileOutputFormat.setOutputPath(job, new Path("/data1/out"));
+        FileInputFormat.setInputPaths(job,new Path("/input/test"));
+        FileOutputFormat.setOutputPath(job, new Path("/out"));
         //提交任务
         boolean result = job.waitForCompletion(true);
         System.exit(result?0:1);

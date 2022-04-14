@@ -32,7 +32,7 @@ public class FlowCountMapper extends Mapper <LongWritable, Text,Text,FlowBean>{
 
         //封装数据
         k.set(phoneNum);
-        //封装FolwBean
+        //封装FlowBean
         v.setUpFlow(upFlow);
         v.setDownFlow(downFlow);
         v.setPhoneNum(Long.parseLong(phoneNum));

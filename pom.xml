@@ -17,6 +17,7 @@
         <module>FlumeInterceptor</module>
         <module>Scala</module>
         <module>Spark-core</module>
+        <module>FlinkStudy</module>
     </modules>
 
     <properties>

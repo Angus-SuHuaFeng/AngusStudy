@@ -15,7 +15,7 @@ import java.io.IOException;
 public class CountDriver {
     public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
         Configuration conf = new Configuration();
-        conf.set("fs.defaultFS","hdfs://BigData1:9000");
+        conf.set("fs.defaultFS","hdfs://bigdata1:8020");
         Job job = Job.getInstance(conf);
         //设置此类（Driver）类jar加载路径
         job.setJarByClass(CountDriver.class);

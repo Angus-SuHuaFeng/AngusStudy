@@ -21,7 +21,6 @@ object RDD_ActionOperator {
 //    1. reduce : 聚集 RDD 中的所有元素，先聚合分区内数据，再聚合分区间数据
     val reduce: Int = rdd.reduce(_ + _)
     println(reduce)
-
 //    2. collect : 在驱动程序中，以数组 Array 的形式返回数据集的所有元素
     val array: Array[Int] = rdd.collect()
     println(array.mkString("Array(", ", ", ")"))
